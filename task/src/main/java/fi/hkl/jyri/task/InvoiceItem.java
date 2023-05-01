@@ -1,20 +1,20 @@
 package fi.hkl.jyri.task;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class InvoiceItem {
 
+    private Customer customer;
     private Product product;
-    private Date date;
+    private LocalDate date;
     private Integer amount;
-    private Invoice invoice;
 
-    public Invoice getInvoice() {
-        return invoice;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setInvoice(Invoice invoice) {
-        this.invoice = invoice;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public Product getProduct() {
@@ -25,11 +25,11 @@ public class InvoiceItem {
         this.product = product;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -41,7 +41,8 @@ public class InvoiceItem {
         this.amount = amount;
     }
 
-    public InvoiceItem(Product product, Date date, Integer amount) {
+    public InvoiceItem(Customer customer, Product product, LocalDate date, Integer amount) {
+        this.customer = customer;
         this.product = product;
         this.date = date;
         this.amount = amount;
