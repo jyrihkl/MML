@@ -7,6 +7,15 @@ public class InvoiceItem {
     private Product product;
     private Date date;
     private Integer amount;
+    private Invoice invoice;
+
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
+    }
 
     public Product getProduct() {
         return product;
