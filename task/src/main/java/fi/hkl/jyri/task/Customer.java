@@ -23,6 +23,10 @@ public class Customer {
         this.category = category;
     }
 
+    public Boolean paysForCategory(ProductCategory pCategory) {
+        return this.category.getPricingModel().get(pCategory);
+    }
+
     public Customer(String customerId, CustomerCategory category) {
         this.customerId = customerId;
         this.category = category;
